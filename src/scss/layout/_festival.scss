@@ -1,0 +1,27 @@
+.sobre-festival{
+    
+    margin-top: 3rem;
+
+    @include tablet{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: $separacion 0;
+        column-gap: $separacion;
+    }
+}
+
+.contenido-festival{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .fecha-festival{
+        color: $rosa;
+        font-weight: $bold;
+    }
+
+    .contenido-festival{
+        line-height: 3rem;
+    }
+}

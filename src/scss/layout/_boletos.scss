@@ -1,0 +1,62 @@
+.boletos{
+    padding: $separacion 0;
+    .boletos-titulo{
+        text-align: center;
+        color: $blanco;
+    }
+}
+
+.contenedor-boletos{
+
+    @include tablet{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $separacion / 2;
+    }
+
+    p{
+        text-align: center;
+        font-weight: $bold;
+        color: $blanco;
+        font-size: 3rem;
+    }
+}
+
+.pase{
+    width: 100%;
+    border-spacing: 0;
+    thead{
+        background-color: $rosa;
+        th{
+            padding: 1.2rem;
+            text-transform: uppercase;
+            font-size: 2.1rem;
+            font-weight: $delgada;
+            color: $blanco;
+        }
+    }
+    tbody{
+        background-color: $blanco;
+        td{
+            padding: 1rem;
+            border-bottom: 1.3px solid #e1e1e1;
+        }
+
+        tr{
+            &:last-of-type{
+                td{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    tfoot{
+        background-color: $morado;
+        color: $blanco;
+        td{
+            padding: 2rem;
+            text-align: center;
+            font-size: 2.3rem;
+        }
+    }
+}

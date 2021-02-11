@@ -1,0 +1,80 @@
+.lineup{
+    background-color: $rosa;
+    margin-top: $separacion;
+    padding-bottom: $separacion / 2;
+
+    h3{
+        text-align: center;
+        padding-top: 2rem;
+        color: $blanco;
+        text-transform: uppercase;
+    }
+
+    p{
+        text-align: center;
+        color: $blanco;
+        font-weight: $bold;
+        text-transform: uppercase;
+        margin: $separacion 0;
+    }
+}
+
+.escenarios-contenedor{
+
+    column-gap: 6rem;
+
+    @include tablet{
+        max-width: 90rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+    
+    .escenario{
+        padding-top: $separacion / 2;
+    }
+
+    .nombre-escenario{
+        text-align: center;
+        color: $negro;
+        font-weight: $bold;
+
+        &:after{
+            content: '';
+            width: 20rem;
+            height: 10rem;
+            display: block;
+            margin: 2rem auto 0 auto;
+            background-size: 15rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+
+}
+
+
+.edm .nombre-escenario{
+    &:after{
+        background-image: url(../img/icono_edm.png);
+    }
+}
+
+.rock .nombre-escenario{
+    &:after{
+        background-image: url(../img/icono_rock.png);
+    }
+}
+
+.calendario{
+    text-align: center;
+    padding: 0;
+    list-style: none;
+    li{
+        padding: 2rem;
+        font-weight: $bold;
+        span{
+            font-weight: $regular;
+        }
+    }
+}

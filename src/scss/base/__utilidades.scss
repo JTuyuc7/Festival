@@ -1,0 +1,15 @@
+.bg-verde{
+    background-color: $verde;
+}
+
+.bg-amarillo{
+    background-color: $amarillo;
+}
+
+.bg-amarillo li:nth-child(odd){
+    background-color: darken($amarillo, 15);
+}
+
+.bg-verde li:nth-child(odd){
+    background-color: darken($verde, 10)
+}
